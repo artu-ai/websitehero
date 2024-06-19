@@ -22,53 +22,57 @@ interface PricingProps {
   description: string;
   buttonText: string;
   benefitList: string[];
+  link: string;  // Add this field to hold the WhatsApp link
 }
 
 const pricingList: PricingProps[] = [
   {
-    title: "Free",
+    title: "PYME",
     popular: 0,
-    price: 0,
+    price: 499,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get Started",
+      "Ideal para pymes que necesitan monitoreo efectivo sin grandes inversiones.",
+    buttonText: "Comprar",
     benefitList: [
-      "1 Team member",
-      "2 GB Storage",
-      "Upto 4 pages",
-      "Community support",
-      "lorem ipsum dolor",
+      "5 Usuarios",
+      "3 Monitores",
+      "Modelo de recomendación personalizado",
+      "Generador de reportes",
     ],
-  },
-  {
-    title: "Premium",
-    popular: 1,
-    price: 5,
-    description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
-    benefitList: [
-      "4 Team member",
-      "4 GB Storage",
-      "Upto 6 pages",
-      "Priority support",
-      "lorem ipsum dolor",
-    ],
+    link: "https://wa.me/16314805472?text=Quiero%20comprar%20el%20paquete%20basico"
   },
   {
     title: "Enterprise",
-    popular: 0,
-    price: 40,
+    popular: 1,
+    price: 1499,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+      "Perfecto para grandes empresas con necesidades avanzadas de monitoreo y predicción.",
+    buttonText: "Comprar",
     benefitList: [
-      "10 Team member",
-      "8 GB Storage",
-      "Upto 10 pages",
-      "Priority support",
-      "lorem ipsum dolor",
+      "Usuarios Ilimitados",
+      "3 Monitores",
+      "Cobertura Federal",
+      "Modelo de recomendación personalizado",
+      "Generador de reportes",
+      "Predicción de resultados regulatorios",
     ],
+    link: "https://wa.me/16314805472?text=Quiero%20comprar%20el%20paquete%20PYMES"
+  },
+  {
+    title: "Flexible",
+    popular: 0,
+    price: 0,
+    description:
+      "Diseñado para empresas que necesitan un plan adaptable y personalizado.",
+    buttonText: "Comprar",
+    benefitList: [
+      "$200 Usuarios Ilimitados",
+      "$300 por monitor",
+      "$0 Cobertura Federal",
+      "$100 Modelo de recomendación personalizado",
+      "$20 Generador de reportes",
+    ],
+    link: "https://wa.me/16314805472?text=Quiero%20comprar%20el%20paquete%20Enterprise"
   },
 ];
 
@@ -79,16 +83,14 @@ export const Pricing = () => {
       className="container py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center">
-        Get
+        Obtén
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          {" "}
-          Unlimited{" "}
+          {" "}Acceso{" "}
         </span>
-        Access
+        Ilimitado 
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-        reiciendis.
+        Con Artu, puedes monitorear regulaciones y leyes de manera eficiente y personalizada. Elige el plan que mejor se adapte a tus necesidades.
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pricingList.map((pricing: PricingProps) => (
@@ -108,20 +110,25 @@ export const Pricing = () => {
                     variant="secondary"
                     className="text-sm text-primary"
                   >
-                    Most popular
+                    Popular
                   </Badge>
                 ) : null}
               </CardTitle>
               <div>
                 <span className="text-3xl font-bold">${pricing.price}</span>
-                <span className="text-muted-foreground"> /month</span>
+                <span className="text-muted-foreground"> /mes (USD)</span>
               </div>
 
               <CardDescription>{pricing.description}</CardDescription>
             </CardHeader>
 
             <CardContent>
-              <Button className="w-full">{pricing.buttonText}</Button>
+              <Button 
+                className="w-full"
+                onClick={() => window.open(pricing.link, "_blank")}
+              >
+                {pricing.buttonText}
+              </Button>
             </CardContent>
 
             <hr className="w-4/5 m-auto mb-4" />

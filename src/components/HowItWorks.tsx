@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
-import { MedalIcon, MapIcon, PlaneIcon, GiftIcon } from "../components/Icons";
+import { ClipboardList, Sliders, Activity, Bell } from "lucide-react";
 
 interface FeatureProps {
   icon: JSX.Element;
@@ -9,28 +9,28 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    icon: <MedalIcon />,
-    title: "Accessibility",
+    icon: <ClipboardList className="text-primary" />, // Assuming 'text-primary' is defined in your app.css for light blue
+    title: "Creación de Monitores",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Las empresas crean monitores personalizados para seguir temas generales o específicos. Responden tres preguntas sobre su compañía y tienen una conversación con nuestro bot sobre lo que desean monitorear.",
   },
   {
-    icon: <MapIcon />,
-    title: "Community",
+    icon: <Sliders className="text-primary" />, // Assuming 'text-primary' is defined in your app.css for light blue
+    title: "Modelo Personalizado",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Con la información proporcionada, creamos un modelo de Machine Learning adaptado a cada monitor. Este modelo detecta riesgos y oportunidades en sitios oficiales de comunicación de iniciativas a nivel federal del gobierno (DOF, Gazetas, Conamer).",
   },
   {
-    icon: <PlaneIcon />,
-    title: "Scalability",
+    icon: <Activity className="text-primary" />, // Assuming 'text-primary' is defined in your app.css for light blue
+    title: "Monitoreo Continuo",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Nuestro sistema monitorea continuamente las regulaciones y leyes las 24 horas, todos los días, asegurando que no se pierda ninguna actualización relevante.",
   },
   {
-    icon: <GiftIcon />,
-    title: "Gamification",
+    icon: <Bell className="text-primary" />, // Assuming 'text-primary' is defined in your app.css for light blue
+    title: "Notificaciones Inmediatas",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Cada vez que se encuentre algo relevante, se les notificará por correo electrónico, incluyendo un resumen rápido sobre por qué podría ser importante para ustedes.",
   },
 ];
 
@@ -41,15 +41,14 @@ export const HowItWorks = () => {
       className="container text-center py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold ">
-        How It{" "}
+      Cómo{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Works{" "}
+        Funciona{" "}
         </span>
-        Step-by-Step Guide
+        Paso por Paso
       </h2>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
+      Descubre cómo Artu simplifica el seguimiento de regulaciones y leyes en México.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

@@ -9,38 +9,37 @@ export const Hero = () => {
       <div className="text-center lg:text-start space-y-6">
         <main className="text-5xl md:text-6xl font-bold">
           <h1 className="inline">
-            <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
-              Shadcn
+            <span className="inline text-primary">
+            Artu:
             </span>{" "}
-            landing page
+            Monitoreo 
           </h1>{" "}
-          for{" "}
+          Regulatorio{" "}
           <h2 className="inline">
             <span className="inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
-              React
+            Impulsado por IA
             </span>{" "}
-            developers
           </h2>
         </main>
 
         <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-          Build your React landing page effortlessly with the required sections
-          to your project.
+        Automatiza el seguimiento de leyes y regulaciones en México con Artu. Nuestro software de IA proporciona actualizaciones en tiempo real y resúmenes accionables.
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Button className="w-full md:w-1/3">Get Started</Button>
+          <a href="https://calendly.com/juanpi-splc/30min" target="_blank" rel="noopener noreferrer">
+            <Button className="w-full md:w-1/3">Solicitar Demo</Button>
+          </a>
 
           <a
             rel="noreferrer noopener"
-            href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+            href="https://app.artu.ai/"
             target="_blank"
             className={`w-full md:w-1/3 ${buttonVariants({
               variant: "outline",
             })}`}
           >
-            Github Repository
-            <GitHubLogoIcon className="ml-2 w-5 h-5" />
+            Ingresar
           </a>
         </div>
       </div>

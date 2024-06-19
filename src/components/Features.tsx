@@ -6,9 +6,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import image from "../assets/growth.png";
-import image3 from "../assets/reflecting.png";
-import image4 from "../assets/looking-ahead.png";
+import image1 from "C:/Users/juanp/Downloads/imageswebsite-2 (1).png";
+import image2 from "C:/Users/juanp/Downloads/imageswebsite-4 (1).png";
+import image3 from "C:/Users/juanp/Downloads/imageswebsite-5 (1).png";
 
 interface FeatureProps {
   title: string;
@@ -18,35 +18,33 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    title: "Responsive Design",
+    title: "Monitoreo en Tiempo Real",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image4,
+      "Artu ofrece monitoreo continuo y en tiempo real de regulaciones y leyes, asegurando que tu empresa siempre esté al tanto de cualquier cambio.",
+    image: image1,
   },
   {
-    title: "Intuitive user interface",
+    title: "Alertas Inteligentes",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Recibe notificaciones inmediatas sobre regulaciones relevantes, con resúmenes claros y concisos para facilitar la toma de decisiones.",
+    image: image2,
+  },
+  {
+    title: "Análisis y Reportes Detallados",
+    description:
+      "Genera reportes ejecutivos personalizados que resumen el impacto potencial de las nuevas regulaciones y leyes en tu empresa",
     image: image3,
-  },
-  {
-    title: "AI-Powered insights",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    image: image,
   },
 ];
 
 const featureList: string[] = [
-  "Dark/Light theme",
-  "Reviews",
-  "Features",
-  "Pricing",
-  "Contact form",
-  "Our team",
-  "Responsive design",
-  "Newsletter",
-  "Minimalist",
+  "Monitoreo 24/7",
+  "Cobertura Nacional",
+  "Alertas en Tiempo Real",
+  "Reportes Personalizados",
+  "Actualizaciones Automáticas",
+  "Seguridad de Datos",
+  "Analítica Avanzada",
 ];
 
 export const Features = () => {
@@ -56,9 +54,9 @@ export const Features = () => {
       className="container py-24 sm:py-32 space-y-8"
     >
       <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-        Many{" "}
+      Principales {" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Great Features
+        Características
         </span>
       </h2>
 

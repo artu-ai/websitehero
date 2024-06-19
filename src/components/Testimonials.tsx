@@ -19,7 +19,7 @@ const testimonials: TestimonialProps[] = [
     image: "https://github.com/shadcn.png",
     name: "John Doe React",
     userName: "@john_Doe",
-    comment: "This landing page is awesome!",
+    comment: "This landing page is Amazing!",
   },
   {
     image: "https://github.com/shadcn.png",
