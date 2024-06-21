@@ -1,4 +1,3 @@
-import React from 'react';
 import { Statistics } from "./Statistics";
 const image3 = "/imageswebsite-5 (1).png";
 

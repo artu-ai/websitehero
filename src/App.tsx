@@ -1,3 +1,4 @@
+import React from 'react';
 import { About } from "./components/About";
 import { Cta } from "./components/Cta";
 import { Features } from "./components/Features";
@@ -9,7 +10,6 @@ import { Pricing } from "./components/Pricing";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { Sponsors } from "./components/Sponsors";
 import "./App.css";
-import React from 'react';
 
 function App() {
   return (
