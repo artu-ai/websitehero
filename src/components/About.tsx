@@ -1,5 +1,6 @@
+import React from 'react';
 import { Statistics } from "./Statistics";
-import newImage from "C:/Users/juanp/Downloads/imageswebsite-3 (1).png";
+const image3 = "/imageswebsite-5 (1).png";
 
 export const About = () => {
   return (
@@ -10,7 +11,7 @@ export const About = () => {
       <div className="bg-muted/50 border rounded-lg py-12">
         <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12">
           <img
-            src={newImage}
+            src={image3}
             alt="New Image"
             className="w-[300px] object-contain rounded-lg"
           />
@@ -23,7 +24,7 @@ export const About = () => {
                 Artu
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-              Fundada por Juan Pablo Ramírez y Alejandro Gutiérrez y Santi, Artu es un software de inteligencia artificial que automatiza el seguimiento de regulaciones y leyes en México, proporcionando a las empresas actualizaciones en tiempo real sobre posibles riesgos y oportunidades.
+              Fundada por Juanpi Ramírez y Alejandro Gutiérrez y Santi, Artu es un software de inteligencia artificial que automatiza el seguimiento de regulaciones y leyes en México, proporcionando a las empresas actualizaciones en tiempo real sobre posibles riesgos y oportunidades.
               </p>
             </div>
 

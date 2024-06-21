@@ -1,3 +1,4 @@
+import React from 'react';
 import { Badge } from "./ui/badge";
 import {
   Card,
@@ -6,9 +7,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import image1 from "C:/Users/juanp/Downloads/imageswebsite-2 (1).png";
-import image2 from "C:/Users/juanp/Downloads/imageswebsite-4 (1).png";
-import image3 from "C:/Users/juanp/Downloads/imageswebsite-5 (1).png";
+const image1 = "/imageswebsite-2 (1).png";
+const image2 = "/imageswebsite-4 (1).png";
+const image3 = "/imageswebsite-5 (1).png";
 
 interface FeatureProps {
   title: string;
