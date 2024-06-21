@@ -1,7 +1,6 @@
-import { LogoIcon } from "./Icons";
-
+import React from "react";
 export const Footer = () => {
-  return (
+  return (  
     <footer id="footer">
       <hr className="w-11/12 mx-auto" />
       <section className="pb-14 text-center">

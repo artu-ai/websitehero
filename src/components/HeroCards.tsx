@@ -1,7 +1,7 @@
+import React from 'react';
 import { useState } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Button } from "@/components/ui/button";
 import { Badge } from "./ui/badge";
-import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -10,10 +10,8 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import { Check, Linkedin } from "lucide-react";
+import { Check } from "lucide-react";
 import { ThumbsUp, ThumbsDown, Tag } from "lucide-react";
-import { LightBulbIcon } from "./Icons";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 "use client";
 import { ResponsivePie } from "@nivo/pie";
 
