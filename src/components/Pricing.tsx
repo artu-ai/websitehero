@@ -1,4 +1,4 @@
-import React from "react";  
+import React from 'react';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -29,7 +29,7 @@ interface PricingProps {
 const pricingList: PricingProps[] = [
   {
     title: "PYME",
-    popular: 0,
+    popular: PopularPlanType.NO,
     price: 499,
     description:
       "Ideal para pymes que necesitan monitoreo efectivo sin grandes inversiones.",
@@ -44,7 +44,7 @@ const pricingList: PricingProps[] = [
   },
   {
     title: "Enterprise",
-    popular: 1,
+    popular: PopularPlanType.YES,
     price: 1499,
     description:
       "Perfecto para grandes empresas con necesidades avanzadas de monitoreo y predicción.",
@@ -61,7 +61,7 @@ const pricingList: PricingProps[] = [
   },
   {
     title: "Flexible",
-    popular: 0,
+    popular: PopularPlanType.NO,
     price: 0,
     description:
       "Diseñado para empresas que necesitan un plan adaptable y personalizado.",

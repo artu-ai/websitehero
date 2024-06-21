@@ -1,4 +1,5 @@
 import React from 'react';
+
 export const LogoIcon = () => {
   return (
     <svg
@@ -14,7 +15,7 @@ export const LogoIcon = () => {
       <rect
         width="18"
         height="18"
-        x="3"
+        x="3" 
         y="3"
         rx="2"
       />

@@ -1,4 +1,5 @@
 import React from "react";
+
 export const Footer = () => {
   return (  
     <footer id="footer">
@@ -9,10 +10,10 @@ export const Footer = () => {
           <a
             rel="noreferrer noopener"
             target="_blank"
-            href="https://github.com/leoMirandaa"
+            href="https://github.com/jovenjuanpi"
             className="text-primary transition-all border-primary hover:border-b-2"
           >
-            
+            GitHub
           </a>
         </h3>
       </section>

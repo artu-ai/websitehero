@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+
 const image1 = "/imageswebsite-2 (1).png";
 const image2 = "/imageswebsite-4 (1).png";
 const image3 = "/imageswebsite-5 (1).png";
