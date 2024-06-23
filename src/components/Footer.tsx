@@ -13,7 +13,6 @@ export const Footer = () => {
             href="https://github.com/jovenjuanpi"
             className="text-primary transition-all border-primary hover:border-b-2"
           >
-            GitHub
           </a>
         </h3>
       </section>
