@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-const image1 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719178808/imageswebsite-2_tkcftr.png";
+const image1 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719181375/Untitled-4_9_vwjwi7.svg";
 const image2 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719178808/imageswebsite-4_z7vnux.png";
 const image3 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719178808/imageswebsite-3_xocngr.png";
 
