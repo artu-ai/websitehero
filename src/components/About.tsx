@@ -1,5 +1,5 @@
 import { Statistics } from "./Statistics";
-const image3 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719178808/imageswebsite-5_tltezh.png";
+const image4 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719178808/imageswebsite-5_tltezh.png";
 
 export const About = () => {
   return (
@@ -10,7 +10,7 @@ export const About = () => {
       <div className="bg-muted/50 border rounded-lg py-12">
         <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12">
           <img
-            src={image3}
+            src={image4}
             alt="New Image"
             className="w-[300px] object-contain rounded-lg"
           />
