@@ -6,20 +6,20 @@ export const Statistics = () => {
 
   const stats: statsProps[] = [
     {
-      quantity: "10X",
-      description: "Más preciso",
+      quantity: "3X",
+      description: "Mayor cobertura vs monitoreo manual",
     },
     {
-      quantity: "96%",
-      description: "cobertura a nivel federal",
+      quantity: "98%",
+      description: "Presión de monitoreo",
+    },
+    {
+      quantity: "92%",
+      description: "Reducción de costos en monitoreo",
     },
     {
       quantity: "24/7",
-      description: "Monitoreo continuo ",
-    },
-    {
-      quantity: "50%",
-      description: "Reducción de costos de cumplimiento",
+      description: "Monitoreo continuo",
     },
   ];
 

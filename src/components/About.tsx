@@ -1,5 +1,5 @@
 import { Statistics } from "./Statistics";
-const image4 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719178808/imageswebsite-5_tltezh.png";
+const image4 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719268737/g142dzcew7zv4gdgxaao.png";
 
 export const About = () => {
   return (
@@ -23,7 +23,7 @@ export const About = () => {
                 Artu
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-              Fundada por Juanpi Ramírez y Alejandro Gutiérrez y Santi, Artu es un software de inteligencia artificial que automatiza el seguimiento de regulaciones y leyes en México, proporcionando a las empresas actualizaciones en tiempo real sobre posibles riesgos y oportunidades.
+              Artu es un software de inteligencia artificial diseñado para automatizar el seguimiento de regulaciones y leyes en México. Nuestra solución proporciona a las empresas actualizaciones en tiempo real sobre posibles riesgos y oportunidades, con resúmenes detallados y concretos. Con Artu, las empresas pueden ahorrar costos de monitoreo, reducir multas por incumplimiento y agilizar sus operaciones con información precisa y oportuna, permitiéndoles enfocarse en lo que realmente importa: el crecimiento de su negocio.
               </p>
             </div>
 

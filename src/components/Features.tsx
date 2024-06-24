@@ -8,9 +8,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-const image1 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719178808/imageswebsite-2_tkcftr.png";
-const image2 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719178808/imageswebsite-4_z7vnux.png";
-const image3 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719178808/imageswebsite-3_xocngr.png";
+const image1 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719268738/vqwb1sxkvbdwzkezl16i.png";
+const image2 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719268737/vzzfqtcvvnrxysqbkekf.png";
+const image3 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719268738/xovdo8rz9xohkfufb9sp.png";
 
 interface FeatureProps {
   title: string;
@@ -20,21 +20,21 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    title: "Monitoreo en Tiempo Real",
+    title: "Monitoreo Continuo y Alertas Inmediatas",
     description:
-      "Artu ofrece monitoreo continuo y en tiempo real de regulaciones y leyes, asegurando que tu empresa siempre esté al tanto de cualquier cambio.",
+      "Artu ofrece monitoreo constante y en tiempo real de regulaciones y leyes, asegurando que tu empresa siempre esté al tanto de cualquier cambio.",
     image: image1,
   },
   {
-    title: "Alertas Inteligentes",
+    title: "Búsqueda Inteligente",
     description:
-      "Recibe notificaciones inmediatas sobre regulaciones relevantes, con resúmenes claros y concisos para facilitar la toma de decisiones.",
+      "Utiliza búsqueda semántica avanzada para encontrar cualquier tema específico en sitios oficiales. Recibe resúmenes detallados de todas las iniciativas y regulaciones relacionadas, detectando similitudes no solo en las palabras, sino en el contexto total.",
     image: image2,
   },
   {
     title: "Análisis y Reportes Detallados",
     description:
-      "Genera reportes ejecutivos personalizados que resumen el impacto potencial de las nuevas regulaciones y leyes en tu empresa",
+      "Genera reportes ejecutivos personalizados que resumen el impacto potencial de las nuevas regulaciones y leyes en tu empresa, facilitando una comprensión profunda y una toma de decisiones informada.",
     image: image3,
   },
 ];
