@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-  base: '/websitehero/', // Ensure this is the correct base path for your GitHub Pages repo
+  base: '/', // Use '/' for custom domains
   root: 'src', // Set the root to the src directory
   plugins: [react()],
   resolve: {
