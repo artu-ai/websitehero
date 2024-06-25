@@ -8,9 +8,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-const image1 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719268738/vqwb1sxkvbdwzkezl16i.png";
-const image2 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719268737/vzzfqtcvvnrxysqbkekf.png";
-const image3 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719268738/xovdo8rz9xohkfufb9sp.png";
+const image1 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719343443/imageswebsite-8_ayq3tx.png";
+const image2 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719344385/imageswebsite-8_1_uhvbde.png";
+const image3 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719344715/imageswebsite-9_jk84ad.png";
 
 interface FeatureProps {
   title: string;

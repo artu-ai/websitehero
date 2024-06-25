@@ -1,5 +1,5 @@
 import { Statistics } from "./Statistics";
-const image4 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719268737/g142dzcew7zv4gdgxaao.png";
+const image4 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719339835/imageswebsite-7_zojwr5.png";
 
 export const About = () => {
   return (
