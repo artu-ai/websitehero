@@ -62,4 +62,10 @@ html {
       right: 100px;
     }
   }
+
+  /* Set the default color scheme to light mode */
+body {
+  color-scheme: light;
+}
+
 }
