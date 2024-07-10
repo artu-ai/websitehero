@@ -194,7 +194,7 @@ export const HeroCards = () => {
         <CardContent>
           <Button 
             className="w-full"
-            onClick={() => window.open("https://wa.me/16314805472?text=Quiero%20iniciar%20la%20prueba%20gratuita", "_blank")}
+            onClick={() => window.open("https://calendly.com/juanpabloramirez-004/30min ", "_blank")}
           >
             Iniciar prueba gratuita
           </Button>

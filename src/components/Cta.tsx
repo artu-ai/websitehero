@@ -25,14 +25,14 @@ export const Cta = () => {
         <div className="space-y-4 lg:col-start-2">
           <Button 
             className="w-full md:mr-4 md:w-auto"
-            onClick={() => window.open("https://calendly.com/juanpi-splc/30min", "_blank")}
+            onClick={() => window.open("https://calendly.com/juanpabloramirez-004/30min", "_blank")}
           >
             Solicitar una Demostración
           </Button>
           <Button
             variant="outline"
             className="w-full md:w-auto"
-            onClick={() => window.open("https://wa.me/16314805472", "_blank")}
+            onClick={() => window.open("https://wa.me/16463210085", "_blank")}
           >
             Contáctanos
           </Button>

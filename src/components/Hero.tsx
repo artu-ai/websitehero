@@ -27,7 +27,7 @@ export const Hero = () => {
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <a href="https://calendly.com/juanpi-splc/30min" target="_blank" rel="noopener noreferrer">
+          <a href="https://calendly.com/juanpabloramirez-004/30min" target="_blank" rel="noopener noreferrer">
             <Button className="w-full md:w-1/3">Solicitar Demo</Button>
           </a>
 

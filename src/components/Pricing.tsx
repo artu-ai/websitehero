@@ -19,7 +19,7 @@ enum PopularPlanType {
 interface PricingProps {
   title: string;
   popular: PopularPlanType;
-  price: number;
+  price: string | number;
   description: string;
   buttonText: string;
   benefitList: string[];
@@ -33,48 +33,33 @@ const pricingList: PricingProps[] = [
     price: 499,
     description:
       "Ideal para pymes que necesitan monitoreo efectivo sin grandes inversiones.",
-    buttonText: "Comprar",
+    buttonText: "Programar reunión",
     benefitList: [
       "5 Usuarios",
       "3 Monitores",
       "Modelo de recomendación personalizado",
-      "Generador de reportes",
+      "Generador de reportes y analítica gráfica",
     ],
-    link: "https://wa.me/16314805472?text=Quiero%20comprar%20el%20paquete%20basico"
+    link: "https://calendly.com/juanpabloramirez-004/30min"
   },
   {
     title: "Enterprise",
     popular: PopularPlanType.YES,
-    price: 1499,
+    price: "Solicitar cotización",
     description:
       "Perfecto para grandes empresas con necesidades avanzadas de monitoreo y predicción.",
-    buttonText: "Comprar",
+    buttonText: "Programar reunión",
     benefitList: [
       "Usuarios Ilimitados",
-      "3 Monitores",
+      "Monitores Ilimitados",
       "Cobertura Federal",
       "Modelo de recomendación personalizado",
-      "Generador de reportes",
+      "Generador de reportes y analítica gráfica",
       "Predicción de resultados regulatorios",
+      "Ajustes personalizados de producto"
     ],
-    link: "https://wa.me/16314805472?text=Quiero%20comprar%20el%20paquete%20PYMES"
-  },
-  {
-    title: "Flexible",
-    popular: PopularPlanType.NO,
-    price: 0,
-    description:
-      "Diseñado para empresas que necesitan un plan adaptable y personalizado.",
-    buttonText: "Comprar",
-    benefitList: [
-      "$200 Usuarios Ilimitados",
-      "$300 por monitor",
-      "$0 Cobertura Federal",
-      "$100 Modelo de recomendación personalizado",
-      "$20 Generador de reportes",
-    ],
-    link: "https://wa.me/16314805472?text=Quiero%20comprar%20el%20paquete%20Enterprise"
-  },
+    link: "https://calendly.com/juanpabloramirez-004/30min"
+  }
 ];
 
 export const Pricing = () => {
@@ -93,7 +78,7 @@ export const Pricing = () => {
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
         Con Artu, puedes monitorear regulaciones y leyes de manera eficiente y personalizada. Elige el plan que mejor se adapte a tus necesidades.
       </h3>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {pricingList.map((pricing: PricingProps) => (
           <Card
             key={pricing.title}
@@ -116,8 +101,14 @@ export const Pricing = () => {
                 ) : null}
               </CardTitle>
               <div>
-                <span className="text-3xl font-bold">${pricing.price}</span>
-                <span className="text-muted-foreground"> /mes (USD)</span>
+                {pricing.title === "PYME" ? (
+                  <span className="text-3xl font-bold">${pricing.price}</span>
+                ) : (
+                  <span className="text-3xl font-bold">{pricing.price}</span>
+                )}
+                {pricing.title === "PYME" && (
+                  <span className="text-muted-foreground"> /mes (USD)</span>
+                )}
               </div>
 
               <CardDescription>{pricing.description}</CardDescription>
