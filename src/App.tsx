@@ -9,6 +9,7 @@ import { Navbar } from "./components/Navbar";
 import { Pricing } from "./components/Pricing";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { Sponsors } from "./components/Sponsors";
+import VideoTutorials from "./components/VideoTutorials";
 import "./App.css";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <HowItWorks />
       <Features />
       <Pricing />
+      <VideoTutorials />
       <Cta />
       <Footer />
       <ScrollToTop />
