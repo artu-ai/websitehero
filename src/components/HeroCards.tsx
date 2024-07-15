@@ -186,8 +186,7 @@ export const HeroCards = () => {
           </div>
 
           <CardDescription>
-            Empieza un trial gratis por 3 meses y prueba por ti mismo las
-            capacidades de Artu.
+          Empieza un trial gratis por 1 mes y prueba por ti mismo las capacidades de Artu. No necesitas poner tarjeta, solo crea una cuenta y disfruta de la magia de Artu.
           </CardDescription>
         </CardHeader>
 
