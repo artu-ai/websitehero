@@ -35,8 +35,8 @@ const pricingList: PricingProps[] = [
       "Ideal para pymes que necesitan monitoreo efectivo sin grandes inversiones.",
     buttonText: "Programar reunión",
     benefitList: [
-      "5 Usuarios",
-      "3 Monitores",
+      "3 Usuarios",
+      "3 monitores + $300 por monitor adicional",
       "Modelo de recomendación personalizado",
       "Generador de reportes y analítica gráfica",
     ],
@@ -51,7 +51,7 @@ const pricingList: PricingProps[] = [
     buttonText: "Programar reunión",
     benefitList: [
       "Usuarios Ilimitados",
-      "Monitores Ilimitados",
+      "5 monitores + $300 por monitor adicional",
       "Cobertura Federal",
       "Modelo de recomendación personalizado",
       "Generador de reportes y analítica gráfica",

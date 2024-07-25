@@ -1,5 +1,4 @@
 import { Statistics } from "./Statistics";
-const image4 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719339835/imageswebsite-7_zojwr5.png";
 
 export const About = () => {
   return (
@@ -8,13 +7,20 @@ export const About = () => {
       className="container py-24 sm:py-32"
     >
       <div className="bg-muted/50 border rounded-lg py-12">
-        <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12">
-          <img
-            src={image4}
-            alt="New Image"
-            className="w-[300px] object-contain rounded-lg"
-          />
-          <div className="bg-green-0 flex flex-col justify-between">
+        <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12 items-center">
+          <div className="w-full md:w-1/2">
+            <iframe 
+              width="100%" 
+              height="315" 
+              src="https://www.youtube.com/embed/IqJtTGdK8jE" 
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen
+              className="object-contain rounded-lg"
+            ></iframe>
+          </div>
+          <div className="bg-green-0 flex flex-col justify-between w-full md:w-1/2">
             <div className="pb-6">
               <h2 className="text-3xl md:text-4xl font-bold">
                 <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
@@ -23,11 +29,23 @@ export const About = () => {
                 Artu
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-              Artu es un software de inteligencia artificial diseñado para automatizar el seguimiento de regulaciones y leyes en México. Nuestra solución proporciona a las empresas actualizaciones en tiempo real sobre posibles riesgos y oportunidades, con resúmenes detallados y concretos. Con Artu, las empresas pueden ahorrar costos de monitoreo, reducir multas por incumplimiento y agilizar sus operaciones con información precisa y oportuna, permitiéndoles enfocarse en lo que realmente importa: el crecimiento de su negocio.
+                Artu es un software de inteligencia artificial diseñado para automatizar el seguimiento de regulaciones y leyes en México. Proporciona actualizaciones en tiempo real sobre posibles riesgos y oportunidades, con resúmenes detallados y concretos. Con Artu, las empresas pueden ahorrar costos de monitoreo, reducir multas por incumplimiento y agilizar sus operaciones.
               </p>
             </div>
-
-            <Statistics />
+            <div className="flex justify-between mt-6">
+              <div className="text-center">
+                <p className="text-4xl font-bold">3X</p>
+                <p className="text-base">Mayor cobertura vs monitoreo manual</p>
+              </div>
+              <div className="text-center">
+                <p className="text-4xl font-bold">98%</p>
+                <p className="text-base">Precisión de monitoreo</p>
+              </div>
+              <div className="text-center">
+                <p className="text-4xl font-bold">24/7</p>
+                <p className="text-base">Monitoreo continuo</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
