@@ -22,6 +22,10 @@ const VideoTutorials = () => {
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-black">
       ¡Descubre cómo sacar el máximo provecho de nuestras herramientas con nuestros videos tutoriales! Aprende de manera fácil y rápida con nuestras guías paso a paso.
       </p>
+      
+      <div className="flex justify-center mb-8">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/IqJtTGdK8jE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {videoThumbnails.slice(0, 3).map(({ name, link }) => (
@@ -36,7 +40,7 @@ const VideoTutorials = () => {
           </a>
         ))}
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
         {videoThumbnails.slice(3).map(({ name, link }) => (
           <a

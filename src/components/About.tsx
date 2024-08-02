@@ -2,20 +2,17 @@ import { Statistics } from "./Statistics";
 
 export const About = () => {
   return (
-    <section
-      id="about"
-      className="container py-24 sm:py-32"
-    >
+    <section id="about" className="container py-24 sm:py-32">
       <div className="bg-muted/50 border rounded-lg py-12">
         <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12 items-center">
           <div className="w-full md:w-1/2">
-            <iframe 
-              width="100%" 
-              height="315" 
-              src="https://www.youtube.com/embed/IqJtTGdK8jE" 
-              title="YouTube video player" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            <iframe
+              width="100%"
+              height="315"
+              src="https://www.youtube.com/embed/_yRZPk2q9NM"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="object-contain rounded-lg"
             ></iframe>
