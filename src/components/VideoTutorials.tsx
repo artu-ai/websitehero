@@ -13,46 +13,38 @@ const videoThumbnails = [
 const VideoTutorials = () => {
   return (
     <section id="tutorials" className="container text-center py-24 sm:py-32">
-      <h2 className="text-3xl md:text-4xl font-bold ">
+      <h2 className="text-3xl md:text-4xl font-bold">
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-        Videos Tutoriales
+          Videos Tutoriales
         </span>{" "}
         para usar Artu
       </h2>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-black">
-      ¡Descubre cómo sacar el máximo provecho de nuestras herramientas con nuestros videos tutoriales! Aprende de manera fácil y rápida con nuestras guías paso a paso.
+        ¡Descubre cómo sacar el máximo provecho de nuestras herramientas con nuestros videos tutoriales! Aprende de manera fácil y rápida con nuestras guías paso a paso.
       </p>
       
-      <div className="flex justify-center mb-8">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/IqJtTGdK8jE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {videoThumbnails.slice(0, 3).map(({ name, link }) => (
-          <a
-            key={name}
-            href={link}
-            className="bg-muted/50 hover:bg-muted text-primary py-8 px-4 rounded-md shadow-md transition-all duration-300 flex items-center justify-center"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <p className="text-center text-primary font-bold text-xl">{name}</p>
-          </a>
-        ))}
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
-        {videoThumbnails.slice(3).map(({ name, link }) => (
-          <a
-            key={name}
-            href={link}
-            className="bg-muted/50 hover:bg-muted text-primary py-8 px-4 rounded-md shadow-md transition-all duration-300 flex items-center justify-center"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <p className="text-center text-primary font-bold text-xl">{name}</p>
-          </a>
-        ))}
+      <div className="flex flex-col md:flex-row items-center md:items-start">
+        <div className="flex justify-center mb-8 md:mb-0 md:mr-8">
+          <iframe width="560" height="400" src="https://www.youtube.com/embed/IqJtTGdK8jE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </div>
+        
+        <div className="flex flex-wrap gap-4 justify-center">
+          {videoThumbnails.map(({ name, link }, index) => (
+            <a
+              key={name}
+              href={link}
+              className="bg-muted/50 hover:bg-muted text-primary p-8 rounded-full shadow-md transition-all duration-300 flex items-center justify-center w-40 h-40"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                gridColumn: index < 3 ? 'span 1' : 'span 1',
+                marginBottom: index < 3 ? '16px' : '0'
+              }}
+            >
+              <p className="text-center text-primary font-bold text-xl">{name}</p>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );
