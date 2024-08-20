@@ -12,7 +12,7 @@ export const Hero = () => {
             <span className="inline text-primary">
               Artu:
             </span>{" "}
-            Monitoreo 
+            Asistente 
           </h1>{" "}
           Regulatorio{" "}
           <h2 className="inline">
@@ -23,7 +23,7 @@ export const Hero = () => {
         </main>
 
         <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-          Automatiza el seguimiento de leyes y regulaciones en México con Artu. Nuestro software de IA proporciona actualizaciones en tiempo real y resúmenes accionables.
+        Pregunta cualquier duda regulatoria y automatiza el seguimiento de leyes y regulaciones en México con Artu, tu asistente inteligente para todo tema regulatorio en el país.
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">

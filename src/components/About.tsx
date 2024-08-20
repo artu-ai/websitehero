@@ -9,7 +9,7 @@ export const About = () => {
             <iframe
               width="100%"
               height="315"
-              src="https://www.youtube.com/embed/_yRZPk2q9NM"
+              src="https://www.youtube.com/embed/ZlQjoLlA-z0"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -26,17 +26,17 @@ export const About = () => {
                 Artu
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Artu es un software de inteligencia artificial diseñado para automatizar el seguimiento de regulaciones y leyes en México. Proporciona actualizaciones en tiempo real sobre posibles riesgos y oportunidades, con resúmenes detallados y concretos. Con Artu, las empresas pueden ahorrar costos de monitoreo, reducir multas por incumplimiento y agilizar sus operaciones.
+                Artu es un software de IA que automatiza el monitoreo de regulaciones y actúa como un chat GPT especializado en temas regulatorios . Proporciona actualizaciones en tiempo real sobre posibles riesgos y oportunidades, con resúmenes detallados y concretos. Con Artu, las empresas pueden ahorrar costos de monitoreo, reducir multas por incumplimiento y agilizar sus operaciones.
               </p>
             </div>
             <div className="flex justify-between mt-6">
               <div className="text-center">
                 <p className="text-4xl font-bold">3X</p>
-                <p className="text-base">Mayor cobertura vs monitoreo manual</p>
+                <p className="text-base">Mayor cobertura</p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-bold">98%</p>
-                <p className="text-base">Precisión de monitoreo</p>
+                <p className="text-4xl font-bold">70%</p>
+                <p className="text-base">Mayor productividad</p>
               </div>
               <div className="text-center">
                 <p className="text-4xl font-bold">24/7</p>

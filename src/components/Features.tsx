@@ -26,9 +26,9 @@ const features: FeatureProps[] = [
     image: image1,
   },
   {
-    title: "Búsqueda Inteligente",
+    title: "Assitente Inteligente",
     description:
-      "Utiliza búsqueda semántica avanzada para encontrar cualquier tema específico en sitios oficiales. Recibe resúmenes detallados de todas las iniciativas y regulaciones relacionadas, detectando similitudes no solo en las palabras, sino en el contexto total.",
+      "Utiliza nuestro asistente inteligente o buscador avanzado para indagar, preguntar o encontrar cualquier tema o duda regulatoria. Recibe resúmenes detallados de todas las iniciativas y profundiza más conversando con Artu.",
     image: image2,
   },
   {
