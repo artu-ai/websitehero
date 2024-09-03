@@ -28,35 +28,37 @@ interface PricingProps {
 
 const pricingList: PricingProps[] = [
   {
-    title: "PYME",
-    popular: PopularPlanType.NO,
+    title: "Business",
+    popular: PopularPlanType.YES,
     price: 499,
     description:
-      "Ideal para pymes que necesitan monitoreo efectivo sin grandes inversiones.",
+      "Precio para negocios que no requieren un proceso para hacernos proveedores",
     buttonText: "Programar reunión",
     benefitList: [
-      "3 Usuarios",
-      "3 monitores + $300 por monitor adicional",
+      "Usuarios ilimitados",
+      "Monitoreo personalizado",
+      "Cobertura federal",
       "Modelo de recomendación personalizado",
       "Generador de reportes y analítica gráfica",
+      "Ajustes personalizados de producto",
     ],
     link: "https://calendly.com/juanpabloramirez-004/30min"
   },
   {
     title: "Enterprise",
-    popular: PopularPlanType.YES,
-    price: "Solicitar cotización",
+    popular: PopularPlanType.NO,
+    price: 3000,
     description:
-      "Perfecto para grandes empresas con necesidades avanzadas de monitoreo y predicción.",
+      "Precio para negocios que si requieren un proceso para hacernos proveedores",
     buttonText: "Programar reunión",
     benefitList: [
-      "Usuarios Ilimitados",
-      "5 monitores + $300 por monitor adicional",
-      "Cobertura Federal",
+      "Usuarios ilimitados",
+      "Monitoreo personalizado",
+      "Cobertura federal",
       "Modelo de recomendación personalizado",
       "Generador de reportes y analítica gráfica",
-      "Predicción de resultados regulatorios",
-      "Ajustes personalizados de producto"
+      "Ajustes personalizados de producto",
+      "Proceso para hacernos proveedores",
     ],
     link: "https://calendly.com/juanpabloramirez-004/30min"
   }
@@ -101,14 +103,8 @@ export const Pricing = () => {
                 ) : null}
               </CardTitle>
               <div>
-                {pricing.title === "PYME" ? (
-                  <span className="text-3xl font-bold">${pricing.price}</span>
-                ) : (
-                  <span className="text-3xl font-bold">{pricing.price}</span>
-                )}
-                {pricing.title === "PYME" && (
-                  <span className="text-muted-foreground"> /mes (USD)</span>
-                )}
+                <span className="text-3xl font-bold">${pricing.price}</span>
+                <span className="text-muted-foreground"> USD</span>
               </div>
 
               <CardDescription>{pricing.description}</CardDescription>

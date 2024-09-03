@@ -203,7 +203,7 @@ export const HeroCards = () => {
 
         <CardFooter className="flex">
           <div className="space-y-4">
-            {["1 mes", "Plan Enterprise", "Oferta limitada"].map(
+            {["1 mes", "Oferta limitada"].map(
               (benefit: string) => (
                 <span key={benefit} className="flex">
                   <Check className="text-green-500" />{" "}
@@ -218,14 +218,14 @@ export const HeroCards = () => {
       {/* Service */}
       <Card className="absolute w-[350px] right-[-10px] top-[300px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="flex flex-row items-center justify-between pb-2">
-          <CardTitle className="text-lg font-bold">Reforma a la Ley de Protección Ambiental</CardTitle>
+          <CardTitle className="text-lg font-bold">	Resolución que modifica a las instituciones de crédito.</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-md">El Congreso ha aprobado una reforma impulsada por la Diputada Juárez que introduce cambios significativos en las normativas para las plantas de cemento. Esta reforma busca reducir las emisiones contaminantes y promover prácticas más sostenibles en la industria cementera.</p>
+          <p className="text-md">El Congreso aprobó una reforma a la Ley de Instituciones de Crédito que ahora exige a los bancos aumentar su capital mínimo y ofrecer mayor transparencia en los contratos de crédito. Esto significa que las instituciones financieras deberán ser más claras en sus términos y condiciones, y los clientes podrían ver un aumento en los requisitos para obtener un préstamo.</p>
           <div className="flex flex-wrap gap-2 mt-2">
-            <Badge variant="outline">CONAMER Anteproyectos</Badge>
+            <Badge variant="outline">Banco Central</Badge>
             <Badge variant="outline">Reforma</Badge>
-            <Badge variant="outline">Cemento</Badge>
+            <Badge variant="outline">Fintech</Badge>
             {selectedTags.map((tag) => (
               <Badge key={tag} variant="outline">{tag}</Badge>
             ))}
