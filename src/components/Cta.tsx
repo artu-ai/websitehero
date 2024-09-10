@@ -18,7 +18,7 @@ export const Cta = () => {
             con Artu
           </h2>
           <p className="text-muted-foreground text-xl mt-4 mb-8 lg:mb-0">
-            Empodera tu negocio con información impulsada por IA y notificaciones en tiempo real. Asegura el cumplimiento y aprovecha las oportunidades sin esfuerzo.
+            Empodera tu negocio con información impulsada por IA y notificaciones en tiempo real. Asegura el cumplimiento de tu empresa.
           </p>
         </div>
 

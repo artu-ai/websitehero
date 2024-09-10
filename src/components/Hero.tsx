@@ -23,11 +23,11 @@ export const Hero = () => {
         </main>
 
         <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-        Pregunta cualquier duda regulatoria y automatiza el seguimiento de leyes y regulaciones en México con Artu, tu asistente inteligente especializado en los sectores farmacéutico y financiero.
+        Pregunta cualquier duda regulatoria y automatiza el seguimiento de leyes y regulaciones en México con Artu, tu asistente inteligente especializado en el sector financiero.
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <a href="https://calendly.com/juanpabloramirez-004/30min" target="_blank" rel="noopener noreferrer">
+          <a href="https://calendly.com/juanpabloramirez-004/onboarding-artu" target="_blank" rel="noopener noreferrer">
             <Button className="w-full md:w-1/3">Solicitar Demo</Button>
           </a>
 
