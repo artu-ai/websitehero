@@ -21,7 +21,6 @@ function App() {
       <Hero />
       <Sponsors />
       <About />
-      <HowItWorks />
       <Features />
       <Pricing />
       <VideoTutorials />

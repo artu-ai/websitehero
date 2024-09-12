@@ -1,57 +1,154 @@
-import React from 'react';
-import { Badge } from "./ui/badge";
+import React, { useState } from 'react';
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
+import { ClipboardList, Sliders, Activity, Bell } from "lucide-react";
 
-const image1 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719343443/imageswebsite-8_ayq3tx.png";
-const image2 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719344385/imageswebsite-8_1_uhvbde.png";
-const image3 = "https://res.cloudinary.com/ddaqwpvht/image/upload/v1719344715/imageswebsite-9_jk84ad.png";
-
-interface FeatureProps {
-  title: string;
-  description: string;
-  image: string;
-}
-
-const features: FeatureProps[] = [
+// Información del monitoreo continuo
+const monitoringSteps = [
   {
-    title: "Monitoreo Continuo y Alertas Inmediatas",
-    description:
-      "Artu ofrece monitoreo constante y en tiempo real de regulaciones y leyes, asegurando que tu empresa siempre esté al tanto de cualquier cambio.",
-    image: image1,
+    step: "Creación",
+    description: (
+      <>
+        Las empresas crean <span style={{ color: "#16A6E9" }}>monitores personalizados</span> para seguir temas generales o específicos. Responden tres preguntas sobre su compañía y tienen una conversación con nuestro bot sobre lo que desean monitorear.
+      </>
+    ),
+    icon: <ClipboardList size={20} />,
   },
   {
-    title: "Assitente Inteligente",
-    description:
-      "Utiliza nuestro asistente inteligente o buscador avanzado para indagar, preguntar o encontrar cualquier tema o duda regulatoria. Recibe resúmenes detallados de todas las iniciativas y profundiza más conversando con Artu.",
-    image: image2,
+    step: "Modelo",
+    description: (
+      <>
+        Con la <span style={{ color: "#16A6E9" }}>información proporcionada</span>, creamos un modelo de Machine Learning adaptado a cada monitor. Este modelo detecta <span style={{ color: "#16A6E9" }}>riesgos</span> y oportunidades en sitios oficiales de comunicación de iniciativas a nivel federal del gobierno (DOF, CNBV, Conamer...).
+      </>
+    ),
+    icon: <Sliders size={20} />,
   },
   {
-    title: "Análisis y Reportes Detallados",
-    description:
-      "Genera reportes ejecutivos personalizados que resumen el impacto potencial de las nuevas regulaciones y leyes en tu empresa, facilitando una comprensión profunda y una toma de decisiones informada.",
-    image: image3,
+    step: "Monitoreo",
+    description: (
+      <>
+        Nuestro sistema monitorea continuamente las <span style={{ color: "#16A6E9" }}>regulaciones y leyes</span> las 24 horas, todos los días, asegurando que no se pierda ninguna actualización relevante.
+      </>
+    ),
+    icon: <Activity size={20} />,
+  },
+  {
+    step: "Notificaciones",
+    description: (
+      <>
+        Cada vez que se encuentre algo relevante, se les notificará por correo electrónico, incluyendo un <span style={{ color: "#16A6E9" }}>resumen rápido</span> sobre por qué podría ser importante para ustedes.
+      </>
+    ),
+    icon: <Bell size={20} />,
   },
 ];
 
-const featureList: string[] = [
-  "Monitoreo 24/7",
-  "Cobertura Nacional",
-  "Alertas en Tiempo Real",
-  "Reportes Personalizados",
-  "Actualizaciones Automáticas",
-  "Seguridad de Datos",
-  "Analítica Avanzada",
+// Componente para la carta dinámica de Monitoreo Continuo
+const MonitoringCard = () => {
+  const [currentStep, setCurrentStep] = useState(0);
+
+  const handleNextStep = () => {
+    setCurrentStep((prevStep) => (prevStep + 1) % monitoringSteps.length);
+  };
+
+  return (
+    <Card>
+      {/* Constant Header for "Monitoreo Automatizado" */}
+      <CardHeader>
+        <h2 className="text-xl font-bold text-[#16A6E9]">Monitoreo Automatizado</h2>
+      </CardHeader>
+
+      {/* Chevron de pasos */}
+      <div className="flex justify-center my-4 gap-2"> {/* Center aligned, adjusted gap */}
+        {monitoringSteps.map((step, index) => (
+          <div
+            key={index}
+            className={`flex items-center gap-2 text-sm px-4 py-2 rounded-full cursor-pointer transition-all duration-300 ${
+              index === currentStep ? "bg-[#16A6E9] text-white" : "bg-gray-200 text-gray-500"
+            }`}
+          >
+            {step.icon}
+            <span>{index + 1}. {step.step}</span>
+          </div>
+        ))}
+      </div>
+
+      <CardContent>
+        <p>{monitoringSteps[currentStep].description}</p>
+      </CardContent>
+
+      <CardFooter>
+        <button className="bg-gray-300 p-2 rounded" onClick={handleNextStep}>
+          Siguiente Paso
+        </button>
+      </CardFooter>
+    </Card>
+  );
+};
+
+// Conversación del asistente inteligente, con interfaz de chat visual
+const conversationSteps = [
+  { role: "bot", text: "Soy un asistente de inteligencia artificial experto en regulación financiera." },
+  { role: "user", text: "El me contesta cualquier pregunta regulatoria de manera concisa y al punto." },
+  { role: "bot", text: "También te digo de dónde saco la información para que sepas que es precisa." },
+  { role: "user", text: "Artu es lo mejor que me ha pasado." },
 ];
 
+// Componente para la carta de Asistente Inteligente con interfaz de chat
+const AssistantCard = () => {
+  const [currentMessage, setCurrentMessage] = useState(0);
+
+  const handleNextMessage = () => {
+    setCurrentMessage((prevMessage) => (prevMessage + 1) % conversationSteps.length);
+  };
+
+  return (
+    <Card>
+      <CardHeader>
+        <h2 className="text-xl font-bold">Asistente Inteligente</h2>
+      </CardHeader>
+      <CardContent>
+        <div className="chat-interface" style={{ border: '1px solid #ccc', padding: '10px', borderRadius: '8px' }}>
+          {conversationSteps.slice(0, currentMessage + 1).map((message, index) => (
+            <div
+              key={index}
+              style={{
+                display: 'flex',
+                justifyContent: message.role === "user" ? 'flex-end' : 'flex-start',
+                marginBottom: '10px'
+              }}
+            >
+              <div
+                style={{
+                  maxWidth: '60%',
+                  backgroundColor: message.role === "user" ? '#16A6E9' : '#f1f1f1',
+                  color: message.role === "user" ? '#fff' : '#000',
+                  padding: '10px',
+                  borderRadius: '20px',
+                  textAlign: 'left'
+                }}
+              >
+                {message.text}
+              </div>
+            </div>
+          ))}
+        </div>
+      </CardContent>
+      <CardFooter>
+        <button className="bg-gray-300 p-2 rounded" onClick={handleNextMessage}>
+          Ver siguiente mensaje
+        </button>
+      </CardFooter>
+    </Card>
+  );
+};
+
+// Componente principal para renderizar ambas cartas
 export const Features = () => {
-  console.log("Features component rendering", features);
-
   return (
     <section
       id="features"
@@ -64,37 +161,12 @@ export const Features = () => {
         </span>
       </h2>
 
-      <div className="flex flex-wrap md:justify-center gap-4">
-        {featureList.map((feature: string) => (
-          <div key={feature}>
-            <Badge
-              variant="secondary"
-              className="text-sm"
-            >
-              {feature}
-            </Badge>
-          </div>
-        ))}
-      </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map(({ title, description, image }: FeatureProps) => (
-          <Card key={title}>
-            <CardHeader>
-              <CardTitle>{title}</CardTitle>
-            </CardHeader>
-
-            <CardContent>{description}</CardContent>
-
-            <CardFooter>
-              <img
-                src={image}
-                alt="About feature"
-                className="w-[200px] lg:w-[300px] mx-auto"
-              />
-            </CardFooter>
-          </Card>
-        ))}
+      <div className="grid md:grid-cols-2 gap-8">
+        {/* Monitoreo Continuo */}
+        <MonitoringCard />
+        
+        {/* Asistente Inteligente */}
+        <AssistantCard />
       </div>
     </section>
   );

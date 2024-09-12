@@ -45,7 +45,7 @@ export const HeroCards = () => {
         <CardContent>
           <div
             onClick={handleChatClick}
-            className="rounded-lg p-3 cursor-pointer text-sm bg-[#1ab6db] text-white mb-2"
+            className="rounded-lg p-3 cursor-pointer text-sm bg-[#16A6E9] text-white mb-2"
             style={{ width: 'auto', maxWidth: '300px' }}
           >
             Quiero lanzar una tarjeta de crédito. ¿Qué regulaciones debo considerar?
