@@ -6,7 +6,7 @@ export const Footer = () => {
       <hr className="w-11/12 mx-auto" />
       <section className="pb-14 text-center">
         <h3>
-          &copy; Artu. Todos los derechos reservados | 646-321-0085 | juanpi@artu.ai
+          &copy; Artu AI LLC. Todos los derechos reservados | 646-321-0085 | juanpabloramirez.004@gmail.com | 254 Chapman Rd Ste 209, Newark, Delaware 19702
         </h3>
         <div className="flex justify-center mt-4">
           <a href="https://www.aitechsuite.com/tools/22311?ref=featured&v=146" target="_blank" rel="nofollow">
