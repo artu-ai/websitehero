@@ -9,6 +9,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { ResponsivePie } from "@nivo/pie";
+import { BorderBeam } from "@/components/magicui/border-beam";
 
 const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--color-primary') || "#1ab6db"; // Fallback color
 
@@ -34,12 +35,12 @@ export const HeroCards = () => {
   };
 
   return (
-    <div className="hidden lg:flex flex-row flex-wrap gap-2 relative w-[700px] h-[500px]">
-      
-      {/* Container for cards floating in a square motion */}
-      <div className="relative w-full h-full">
+    <div className="hidden lg:grid grid-cols-2 gap-6 grid-rows-2 mt-4"> {/* Reduced margin-top from mt-12 to mt-4 */}
+      {/* First row: Artu Chat and Iniciativas este Mes */}
+      <div className="row-start-1">
         {/* Chat Card */}
-        <Card className="card-float card-1 w-[340px] h-[275px]">
+        <Card className="w-full h-full relative">
+          <BorderBeam colorFrom={primaryColor} colorTo="#1a85db" /> {/* Updated BorderBeam with primary color */}
           <CardHeader>
             <div className="text-lg font-bold">Artu Chat</div>
             <div className="text-gray-400 text-xs mb-2">Haz clic para interactuar</div>
@@ -59,9 +60,12 @@ export const HeroCards = () => {
             )}
           </CardContent>
         </Card>
+      </div>
 
+      <div className="row-start-1">
         {/* Pie Chart Card */}
-        <Card className="card-float card-2 w-80 h-64">
+        <Card className="w-full h-full relative">
+          <BorderBeam colorFrom={primaryColor} colorTo="#1a85db" /> {/* Updated BorderBeam with primary color */}
           <CardHeader className="w-full h-full p-4">
             <div className="text-center text-lg font-bold mb-2">Iniciativas este Mes</div>
             <ResponsivePie
@@ -91,9 +95,13 @@ export const HeroCards = () => {
             />
           </CardHeader>
         </Card>
+      </div>
 
+      {/* Second row: Gratis! and Resolución que modifica */}
+      <div className="row-start-2">
         {/* Pricing Card */}
-        <Card className="card-float card-3 w-72">
+        <Card className="w-full relative">
+          <BorderBeam colorFrom={primaryColor} colorTo="#1a85db" /> {/* Updated BorderBeam with primary color */}
           <CardHeader>
             <div className="text-left">
               <span className="font-bold text-lg">Gratis!</span>
@@ -115,9 +123,12 @@ export const HeroCards = () => {
             </Button>
           </CardContent>
         </Card>
+      </div>
 
+      <div className="row-start-2">
         {/* Service Card */}
-        <Card className="card-float card-4 w-[375px]">
+        <Card className="w-full relative">
+          <BorderBeam colorFrom={primaryColor} colorTo="#1a85db" /> {/* Updated BorderBeam with primary color */}
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <div className="text-lg font-bold">Resolución que modifica a las instituciones de crédito.</div>
           </CardHeader>
@@ -144,52 +155,6 @@ export const HeroCards = () => {
           </CardFooter>
         </Card>
       </div>
-
-      <style jsx>{`
-        /* Base positioning of cards */
-        .card-1 {
-          top: 0;
-          left: 0;
-        }
-        .card-2 {
-          top: 0;
-          left: 350px;
-        }
-        .card-3 {
-          top: 300px;
-          left: 0;
-        }
-        .card-4 {
-          top: 300px;
-          left: 350px;
-        }
-
-        /* Animation to move all cards together in a square motion around the region */
-        .card-float {
-          position: absolute;
-          animation: floatInSquare 4s infinite linear;
-        }
-
-        @keyframes floatInSquare {
-          0% {
-            transform: translate(0px, 0px); /* Start */
-          }
-          25% {
-            transform: translate(0px, 20px); /* Move down */
-          }
-          50% {
-            transform: translate(20px, 20px); /* Move right */
-          }
-          75% {
-            transform: translate(20px, 0px); /* Move up */
-          }
-          100% {
-            transform: translate(0px, 0px); /* Back to start */
-          }
-        }
-
-        /* All cards move in sync */
-      `}</style>
     </div>
   );
 };

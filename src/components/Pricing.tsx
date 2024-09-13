@@ -30,7 +30,7 @@ const pricingList: PricingProps[] = [
   {
     title: "Business",
     popular: PopularPlanType.YES,
-    price: 499,
+    price: 999,
     description:
       "Precio para negocios que no requieren un proceso para hacernos proveedores",
     buttonText: "Programar reunión",

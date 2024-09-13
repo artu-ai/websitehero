@@ -1,4 +1,4 @@
-import { Statistics } from "./Statistics";
+import NumberTicker from "./magicui/NumberTicker"; // Importing NumberTicker from the correct path
 
 export const About = () => {
   return (
@@ -26,20 +26,27 @@ export const About = () => {
                 Artu
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Artu es un software de IA que automatiza el monitoreo de regulaciones y actúa como un chat GPT especializado en temas regulatorios . Proporciona actualizaciones en tiempo real sobre posibles riesgos y oportunidades, con resúmenes detallados y concretos. Con Artu, las empresas pueden ahorrar costos de monitoreo, reducir multas por incumplimiento y agilizar sus operaciones.
+                Artu es un software de IA que automatiza el monitoreo de regulaciones y actúa como un chat GPT especializado en temas regulatorios. Proporciona actualizaciones en tiempo real sobre posibles riesgos y oportunidades, con resúmenes detallados y concretos. Con Artu, las empresas pueden ahorrar costos de monitoreo, reducir multas por incumplimiento y agilizar sus operaciones.
               </p>
             </div>
             <div className="flex justify-between mt-6">
               <div className="text-center">
-                <p className="text-4xl font-bold">3X</p>
+                <p className="text-4xl font-bold">
+                  <NumberTicker value={3} delay={0.5} className="inline-block" />
+                  X
+                </p>
                 <p className="text-base">Mayor cobertura</p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-bold">70%</p>
+                <p className="text-4xl font-bold">
+                  <NumberTicker value={70} delay={0.5} className="inline-block" />%
+                </p>
                 <p className="text-base">Mayor productividad</p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-bold">24/7</p>
+                <p className="text-4xl font-bold">
+                  <NumberTicker value={24} delay={0.5} className="inline-block" />/7
+                </p>
                 <p className="text-base">Monitoreo continuo</p>
               </div>
             </div>
