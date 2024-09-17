@@ -1,25 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "./ui/button";
 import { buttonVariants } from "./ui/button";
 import { HeroCards } from "./HeroCards";
+import AnimatedShinyText from './magicui/animated-shiny-text';
+import TypingAnimation from './magicui/typing-animation'; // Typing animation component
 
 export const Hero = () => {
+  const [isTypingFinished, setIsTypingFinished] = useState(false);
+
+  const handleTypingFinish = () => {
+    setIsTypingFinished(true); // Trigger style changes when typing is done
+  };
+
+  // Segments of the text with the correct colors and classes
+  const segments = [
+    { text: "Artu", className: "text-primary" },
+    { text: ": Asistente Regulatorio ", className: "text-black" },
+    { text: "Impulsado", className: "text-primary" },
+    { text: " por IA", className: "text-transparent bg-clip-text bg-gradient-to-r from-[#61DAFB] to-[#1fc0f1]" }
+  ];
+
   return (
-    <section className="container grid lg:grid-cols-2 place-items-center py-30 md:py-5 gap-10"> {/* Reduced py-20 and py-32 to py-10 and py-16 */}
+    <section className="container grid lg:grid-cols-2 place-items-center py-30 md:py-5 gap-10">
       <div className="text-center lg:text-start space-y-6">
         <main className="text-5xl md:text-6xl font-bold">
-          <h1 className="inline">
-            <span className="inline text-primary">
-              Artu:
-            </span>{" "}
-            Asistente 
-          </h1>{" "}
-          Regulatorio{" "}
-          <h2 className="inline">
-            <span className="inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
-              Impulsado por IA
-            </span>{" "}
-          </h2>
+          {!isTypingFinished ? (
+            <TypingAnimation
+              segments={segments}
+              onFinish={handleTypingFinish}
+              duration={100}  // Adjust typing speed
+            />
+          ) : (
+            <h1 className="inline-block">
+              <span className="inline text-primary">Artu</span>
+              <span className="inline">: Asistente Regulatorio </span>
+              <span className="inline text-primary">
+                <AnimatedShinyText className="inline text-primary">Impulsado</AnimatedShinyText>
+              </span>
+              {/* Explicit space added here */}
+              <span> </span>
+              <span className="inline text-transparent bg-clip-text bg-gradient-to-r from-[#61DAFB] to-[#1fc0f1]">
+                por IA
+              </span>
+            </h1>
+          )}
         </main>
 
         <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
@@ -28,7 +52,9 @@ export const Hero = () => {
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
           <a href="https://calendly.com/juanpabloramirez-004/onboarding-artu" target="_blank" rel="noopener noreferrer">
-            <Button className="w-full md:w-1/3">Solicitar Demo</Button>
+            <Button className="w-full md:w-1/3">
+              <AnimatedShinyText>Solicitar Demo</AnimatedShinyText>
+            </Button>
           </a>
 
           <a
@@ -44,12 +70,10 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Hero cards sections */}
       <div className="z-10">
         <HeroCards />
       </div>
 
-      {/* Shadow effect */}
       <div className="shadow"></div>
     </section>
   );
