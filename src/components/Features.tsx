@@ -5,26 +5,41 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { AnimatedBeamMultipleOutputDemo } from './AnimatedBeamMultipleOutputDemo';
+import { motion } from 'framer-motion';
+
+// Variantes de animación
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+};
 
 // Componente para la carta de Monitoreo Automatizado
 const MonitoringCard = () => {
   return (
-    <Card>
-      <CardHeader>
-        <h2 className="text-xl font-bold text-[#16A6E9]">Monitoreo Automatizado</h2>
-      </CardHeader>
-      <CardContent>
-        <div style={{ display: 'block', marginTop: '-10px', marginBottom: '10px' }}>
-          <AnimatedBeamMultipleOutputDemo />
-        </div>
-        <p className="font-medium">
-          El feature de monitoreo de <span className="font-bold text-[#16A6E9]">Artu</span> permite a las empresas financieras en México 
-          automatizar la vigilancia de <span className="font-bold text-[#16A6E9]">regulaciones gubernamentales</span> a nivel federal. El sistema escanea en tiempo real fuentes 
-          como el <span className="font-bold text-[#16A6E9]">Diario Oficial de la Federación</span> (DOF) y otras publicaciones relevantes, ofreciendo 
-          <span className="font-bold text-[#16A6E9]"> alertas inmediatas</span> cuando se publican nuevas normativas, iniciativas o comunicaciones importantes. 
-        </p>
-      </CardContent>
-    </Card>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={fadeInUp}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+    >
+      <Card>
+        <CardHeader>
+          <h2 className="text-xl font-bold text-[#16A6E9]">Monitoreo Automatizado</h2>
+        </CardHeader>
+        <CardContent>
+          <div style={{ display: 'block', marginTop: '-10px', marginBottom: '10px' }}>
+            <AnimatedBeamMultipleOutputDemo />
+          </div>
+          <p className="font-medium">
+            El feature de monitoreo de <span className="font-bold text-[#16A6E9]">Artu</span> permite a las empresas financieras en México
+            automatizar la vigilancia de <span className="font-bold text-[#16A6E9]">regulaciones gubernamentales</span> a nivel federal. El sistema escanea en tiempo real fuentes
+            como el <span className="font-bold text-[#16A6E9]">Diario Oficial de la Federación</span> (DOF) y otras publicaciones relevantes, ofreciendo
+            <span className="font-bold text-[#16A6E9]"> alertas inmediatas</span> cuando se publican nuevas normativas, iniciativas o comunicaciones importantes.
+          </p>
+        </CardContent>
+      </Card>
+    </motion.div>
   );
 };
 
@@ -67,48 +82,56 @@ const AssistantCard = () => {
   }, [currentMessage]);
 
   return (
-    <Card>
-      <CardHeader>
-        <h2 className="text-xl font-bold">Asistente Inteligente</h2>
-      </CardHeader>
-      <CardContent>
-        <div
-          className="chat-interface p-2"
-          ref={chatRef}
-          style={{
-            borderRadius: '8px',
-            height: '600px', // Altura fija
-            overflowY: 'auto', // Enable scroll when content overflows
-            position: 'relative',
-          }}
-        >
-          {conversationSteps.slice(0, currentMessage + 1).map((message, index) => (
-            <div
-              key={index}
-              style={{
-                display: 'flex',
-                justifyContent: message.role === "user" ? 'flex-end' : 'flex-start',
-                marginBottom: '10px',
-              }}
-            >
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={fadeInUp}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+    >
+      <Card>
+        <CardHeader>
+          <h2 className="text-xl font-bold">Asistente Inteligente</h2>
+        </CardHeader>
+        <CardContent>
+          <div
+            className="chat-interface p-2"
+            ref={chatRef}
+            style={{
+              borderRadius: '8px',
+              height: '600px', // Altura fija
+              overflowY: 'auto', // Habilita el scroll cuando el contenido sobrepasa el tamaño
+              position: 'relative',
+            }}
+          >
+            {conversationSteps.slice(0, currentMessage + 1).map((message, index) => (
               <div
+                key={index}
                 style={{
-                  maxWidth: '60%',
-                  backgroundColor: message.role === "user" ? '#16A6E9' : '#f1f1f1',
-                  color: message.role === "user" ? '#fff' : '#000',
-                  padding: '10px',
-                  borderRadius: '20px',
-                  textAlign: 'left',
-                  whiteSpace: 'pre-wrap',
+                  display: 'flex',
+                  justifyContent: message.role === "user" ? 'flex-end' : 'flex-start',
+                  marginBottom: '10px',
                 }}
               >
-                {message.text}
+                <div
+                  style={{
+                    maxWidth: '60%',
+                    backgroundColor: message.role === "user" ? '#16A6E9' : '#f1f1f1',
+                    color: message.role === "user" ? '#fff' : '#000',
+                    padding: '10px',
+                    borderRadius: '20px',
+                    textAlign: 'left',
+                    whiteSpace: 'pre-wrap',
+                  }}
+                >
+                  {message.text}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </CardContent>
-    </Card>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    </motion.div>
   );
 };
 
@@ -119,20 +142,27 @@ export const Features = () => {
       id="features"
       className="container py-24 sm:py-32 space-y-8"
     >
-      <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-        Principales {" "}
+      <motion.h2
+        className="text-3xl lg:text-4xl font-bold md:text-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
+        Principales{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           Características
         </span>
-      </h2>
+      </motion.h2>
 
       <div className="grid md:grid-cols-2 gap-8">
         {/* Monitoreo Continuo */}
         <MonitoringCard />
-        
+
         {/* Asistente Inteligente */}
         <AssistantCard />
       </div>
     </section>
   );
-}
+};

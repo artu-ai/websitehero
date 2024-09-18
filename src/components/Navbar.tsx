@@ -21,7 +21,6 @@ const routeList = [
   { href: "#about", label: "Acerca de Artu" },
   { href: "#features", label: "Funcionalidades" },
   { href: "#pricing", label: "Precios" },
-  { href: "#tutorials", label: "Tutoriales" },  // Added Tutorials Link
   { href: "#cta", label: "Contáctanos" },
 ];
 

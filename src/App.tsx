@@ -23,7 +23,6 @@ function App() {
       <About />
       <Features />
       <Pricing />
-      <VideoTutorials />
       <Cta />
       <Footer />
       <ScrollToTop />

@@ -4,6 +4,7 @@ import { buttonVariants } from "./ui/button";
 import { HeroCards } from "./HeroCards";
 import AnimatedShinyText from './magicui/animated-shiny-text';
 import TypingAnimation from './magicui/typing-animation'; // Typing animation component
+import BlurFadeProps from './magicui/typing-animation'; 
 
 export const Hero = () => {
   const [isTypingFinished, setIsTypingFinished] = useState(false);

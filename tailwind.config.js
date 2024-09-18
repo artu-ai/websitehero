@@ -65,7 +65,7 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
-        // Add the shimmer keyframes for the shiny text animation
+        // Shimmer keyframes for shiny text animation
         shimmer: {
           "0%, 90%, 100%": {
             "background-position": "calc(-100% - var(--shimmer-width)) 0",
@@ -74,20 +74,27 @@ module.exports = {
             "background-position": "calc(100% + var(--shimmer-width)) 0",
           },
         },
-        // Add the border-beam keyframes
+        // Border-beam keyframes
         "border-beam": {
           "100%": {
             "offset-distance": "100%",
           },
         },
+        // Retro grid keyframes
+        grid: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        // Add the shimmer animation for shiny text
+        // Shimmer animation for shiny text
         shimmer: "shimmer 8s infinite",
-        // Add the border-beam animation
+        // Border-beam animation
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+        // Retro grid animation
+        grid: "grid 15s linear infinite",
       },
     },
   },
