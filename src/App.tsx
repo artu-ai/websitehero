@@ -22,7 +22,6 @@ function App() {
       <Sponsors />
       <About />
       <Features />
-      <Pricing />
       <Cta />
       <Footer />
       <ScrollToTop />

@@ -16,9 +16,9 @@ export const Hero = () => {
   // Segments of the text with the correct colors and classes
   const segments = [
     { text: "Artu", className: "text-primary" },
-    { text: ": Asistente Regulatorio ", className: "text-black" },
-    { text: "Impulsado", className: "text-primary" },
-    { text: " por IA", className: "text-transparent bg-clip-text bg-gradient-to-r from-[#61DAFB] to-[#1fc0f1]" }
+    { text: ": Automatiza Compliance y ", className: "text-black" },
+    { text: "regulación", className: "text-primary" },
+    { text: " con IA", className: "text-transparent bg-clip-text bg-gradient-to-r from-[#61DAFB] to-[#1fc0f1]" }
   ];
 
   return (
@@ -34,21 +34,21 @@ export const Hero = () => {
           ) : (
             <h1 className="inline-block">
               <span className="inline text-primary">Artu</span>
-              <span className="inline">: Asistente Regulatorio </span>
+              <span className="inline">: Automatiza Compliance y </span>
               <span className="inline text-primary">
-                <AnimatedShinyText className="inline text-primary">Impulsado</AnimatedShinyText>
+                <AnimatedShinyText className="inline text-primary">regulación</AnimatedShinyText>
               </span>
               {/* Explicit space added here */}
               <span> </span>
               <span className="inline text-transparent bg-clip-text bg-gradient-to-r from-[#61DAFB] to-[#1fc0f1]">
-                por IA
+              con IA
               </span>
             </h1>
           )}
         </main>
 
         <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-          Pregunta cualquier duda regulatoria y automatiza el seguimiento de leyes y regulaciones en México con Artu, tu asistente inteligente especializado en el sector financiero.
+        Automatiza cualquier proceso de compliance y resuelve dudas regulatorias con Artu, el software que potencia el cumplimiento en Mexico con IA.
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">

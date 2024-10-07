@@ -27,9 +27,9 @@ export const Cta = () => {
             Automatiza el
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
               {" "}
-              Monitoreo Regulatorio{" "}
+              cumplimiento regulatorio{" "}
             </span>
-            con Artu
+            de tu empresa con Artu
           </motion.h2>
           <motion.p
             className="text-muted-foreground text-xl mt-4 mb-8 lg:mb-0"
@@ -39,7 +39,7 @@ export const Cta = () => {
             variants={fadeInUp}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            Empodera tu negocio con información impulsada por IA y notificaciones en tiempo real. Asegura el cumplimiento de tu empresa.
+            Reduce costos, evita multas y agiliza tus operaciones con IA. 
           </motion.p>
         </div>
 

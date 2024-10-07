@@ -1,4 +1,5 @@
 import NumberTicker from "./magicui/NumberTicker"; // Importando NumberTicker desde la ruta correcta
+import HeroVideoDialog from './magicui/hero-video-dialog'; // Importing HeroVideoDialog to replace iframe
 import TextRevealByWord from "./magicui/text-reveal";
 import { motion } from 'framer-motion';
 
@@ -20,23 +21,20 @@ export const About = () => {
       >
         <div className="px-6 flex flex-col-reverse md:flex-row gap-8 md:gap-12 items-center">
           <motion.div
-            className="w-full md:w-1/2"
+            className="w-full md:w-1/2 flex items-center justify-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUp}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            <iframe
-              width="100%"
-              height="315"
-              src="https://www.youtube.com/embed/ZlQjoLlA-z0"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="object-contain rounded-lg"
-            ></iframe>
+            <HeroVideoDialog
+              videoSrc="https://www.youtube.com/embed/ZlQjoLlA-z0"
+              thumbnailSrc="https://img.youtube.com/vi/ZlQjoLlA-z0/maxresdefault.jpg"
+              thumbnailAlt="Artu Overview Video"
+              animationStyle="from-center"
+              className="w-full h-full rounded-lg"
+            />
           </motion.div>
           <motion.div
             className="bg-green-0 flex flex-col justify-between w-full md:w-1/2"
@@ -54,7 +52,7 @@ export const About = () => {
                 Artu
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Artu es un software de IA que automatiza el monitoreo de regulaciones y actúa como un chat GPT especializado en temas regulatorios. Proporciona actualizaciones en tiempo real sobre posibles riesgos y oportunidades, con resúmenes detallados y concretos. Con Artu, las empresas pueden ahorrar costos de monitoreo, reducir multas por incumplimiento y agilizar sus operaciones.
+                Artu es un software de IA que automatiza el monitoreo de regulaciones y actúa como un chat GPT especializado en temas regulatorios. Además de nuestros productos preconfigurados de monitoreo y asistencia, también desarrollamos soluciones personalizadas para automatizar cualquier proceso de compliance. Somos expertos en crear herramientas de compliance con IA, ayudando a las empresas a reducir costos, evitar multas y agilizar sus operaciones.
               </p>
             </div>
             <div className="flex justify-between mt-6">

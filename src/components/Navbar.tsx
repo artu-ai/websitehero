@@ -20,7 +20,6 @@ import { ArtuLogo } from "./Icons"; // Ensure this path is correct
 const routeList = [
   { href: "#about", label: "Acerca de Artu" },
   { href: "#features", label: "Funcionalidades" },
-  { href: "#pricing", label: "Precios" },
   { href: "#cta", label: "Contáctanos" },
 ];
 
