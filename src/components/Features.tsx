@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import HeroVideoDialog from './magicui/hero-video-dialog'; // Import the HeroVideoDialog component
 import { ChevronLeft, ChevronRight, Info } from 'lucide-react'; // Import arrow and info icons
@@ -17,7 +17,7 @@ export const Features = () => {
   // Array of video details
   const videos = [
     {
-      videoSrc: "https://www.youtube.com/embed/NqxtX1_0mM4",
+      videoSrc: "https://www.youtube.com/embed/VSBCWiMKFMc", // Corrected Tella TV URL for embedding 
       thumbnailSrc: "https://res.cloudinary.com/dfmpmintr/image/upload/v1728339876/Untitled_37_tgwxa1.png",
       thumbnailAlt: "Hero Video Thumbnail 1",
       title: "Monitoreo Automatizado",
