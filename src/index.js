@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <h1>Hello, world!</h1>
-      <p>Welcome to Artu - Monitoreo Inteligente</p>
+      <p>Welcome to Artu - Automatiza Compliance con IA (AML, monitoreo regulatorio, consultas regulatorias)</p>
     </div>
   );
 }
