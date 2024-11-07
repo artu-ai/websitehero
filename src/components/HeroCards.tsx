@@ -1,73 +1,80 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "./ui/badge";
 import { ThumbsUp, ThumbsDown, Tag } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardFooter,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card";
 import { ResponsivePie } from "@nivo/pie";
 import { BorderBeam } from "@/components/magicui/border-beam";
+import "./HeroCards.css";
 
-const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--color-primary') || "#1ab6db"; // Fallback color
+const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--color-primary') || "#1ab6db";
 
 export const HeroCards = () => {
-  const [currentChatIndex, setCurrentChatIndex] = useState(0);
-  const [showAnswer, setShowAnswer] = useState(true); // Start with the answer shown
+  const [imageIndex, setImageIndex] = useState(0);
+  const [showAnswer, setShowAnswer] = useState(true); // Show both messages initially
   const [iconClicked, setIconClicked] = useState([false, false]);
 
-  const handleChatClick = () => {
-    setShowAnswer(!showAnswer);
-    if (!showAnswer) {
-      setShowAnswer(true);
-    } else {
-      setCurrentChatIndex((prevIndex) => (prevIndex + 1) % 2);
-      setShowAnswer(false);
-    }
-  };
+  const images = [
+    "https://res.cloudinary.com/dfmpmintr/image/upload/v1730852633/Untitled_39_b0bdw0.png",
+    "https://res.cloudinary.com/dfmpmintr/image/upload/v1730928503/Untitled-2_22_nw7cn5.png",
+    "https://res.cloudinary.com/dfmpmintr/image/upload/v1730852633/Untitled_39_b0bdw0.png",
+    "https://res.cloudinary.com/dfmpmintr/image/upload/v1730928503/Untitled-3_17_hgizuz.png"
+  ];
+  const messages = ["Analizando identidad y transacción...", "Identidad y transacción aprobadas", "Analizando identidad y transacción...", "Alta probabilidad de lavado de dinero"];
+  const icons = [
+    <span className="loading-dots">.</span>,
+    "✔️",
+    <span className="loading-dots">.</span>,
+    "❌"
+  ];
+  const iconColors = ["#000", "green", "#000", "red"];
 
-  const handleIconClick = (index: number) => {
-    const newIconClicked = [...iconClicked];
-    newIconClicked[index] = !newIconClicked[index];
-    setIconClicked(newIconClicked);
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="hidden lg:grid grid-cols-2 gap-6 grid-rows-2 mt-4"> {/* Reduced margin-top from mt-12 to mt-4 */}
-      {/* First row: Artu Chat and Iniciativas este Mes */}
-      <div className="row-start-1">
-        {/* Chat Card */}
-        <Card className="w-full h-full relative">
-          <BorderBeam colorFrom={primaryColor} colorTo="#1a85db" /> {/* Updated BorderBeam with primary color */}
-          <CardHeader>
-            <div className="text-lg font-bold">Artu Chat</div>
-            <div className="text-gray-400 text-xs mb-2">Haz clic para interactuar</div>
+    <div className="hidden lg:grid grid-cols-2 gap-6 grid-rows-2 mt-4">
+      <div className="row-start-1 relative">
+        <Card className="w-full h-auto relative overflow-hidden">
+          <span className="open-applications-bubble">Waitlist</span>
+          <BorderBeam colorFrom={primaryColor} colorTo="#1a85db" />
+          <CardHeader className="pb-1">
+            <div className="text-lg font-bold">Automatización PLD</div>
+            <div className="text-gray-400 text-xs">KYC, Matrices y Monitoreo Transaccional</div>
           </CardHeader>
-          <CardContent>
-            <div
-              onClick={handleChatClick}
-              className="rounded-lg p-3 cursor-pointer text-sm bg-[#16A6E9] text-white mb-2"
-              style={{ width: 'auto', maxWidth: '300px' }}
-            >
-              Quiero lanzar una tarjeta de crédito. ¿Qué regulaciones debo considerar?
-            </div>
-            {showAnswer && (
-              <div className="rounded-lg p-3 text-sm bg-gray-300 text-black mb-2" style={{ width: 'auto', maxWidth: '300px' }}>
-                Debes cumplir con las normativas del Banco de México, la CNBV, y la Ley de Instituciones de Crédito...
+          <CardContent className="flex flex-col items-center justify-center relative p-4">
+            <div className="inspection-line"></div>
+            <div className="relative">
+              <img 
+                src={images[imageIndex]} 
+                alt={messages[imageIndex]} 
+                className="mt-4"
+              />
+              <div 
+                className="absolute inset-0 flex items-center justify-center text-5xl"
+                style={{ color: iconColors[imageIndex] }}
+              >
+                {icons[imageIndex]}
               </div>
-            )}
+            </div>
           </CardContent>
+          <div className="text-center text-xs text-primary font-bold my-4">
+            {messages[imageIndex]}
+          </div>
         </Card>
       </div>
 
       <div className="row-start-1">
-        {/* Pie Chart Card */}
         <Card className="w-full h-full relative">
-          <BorderBeam colorFrom={primaryColor} colorTo="#1a85db" /> {/* Updated BorderBeam with primary color */}
+          <BorderBeam colorFrom={primaryColor} colorTo="#1a85db" />
           <CardHeader className="w-full h-full p-4">
-            <div className="text-center text-lg font-bold mb-2">Iniciativas este Mes</div>
+            <div className="text-center text-lg font-bold mb-2">Visualizaciones regulatorias
+</div>
             <ResponsivePie
               data={[
                 { id: "PRD", label: "PRD", value: 146, color: "hsl(266, 70%, 50%)" },
@@ -97,40 +104,34 @@ export const HeroCards = () => {
         </Card>
       </div>
 
-      {/* Second row: Gratis! and Resolución que modifica */}
       <div className="row-start-2">
-        {/* Pricing Card */}
-        <Card className="w-full relative">
-          <BorderBeam colorFrom={primaryColor} colorTo="#1a85db" /> {/* Updated BorderBeam with primary color */}
+        <Card className="w-full h-auto relative">
+          <BorderBeam colorFrom={primaryColor} colorTo="#1a85db" />
           <CardHeader>
-            <div className="text-left">
-              <span className="font-bold text-lg">Gratis!</span>
-              <Badge variant="secondary" className="text-sm text-primary ml-2">Promoción</Badge>
-            </div>
-            <div className="text-left">
-              <span className="text-3xl font-bold">$0</span>
-              <span className="text-muted-foreground"> /month</span>
-            </div>
+            <div className="text-lg font-bold">Chatbot Regulatorio</div>
+            <div className="text-gray-400 text-xs mb-2">Haz clic para interactuar</div>
           </CardHeader>
-
-          <CardContent className="text-left">
-            Empieza un trial gratis por 1 mes y prueba por ti mismo las capacidades de Artu.
-            <Button 
-              className="w-full mt-4 text-left"
-              onClick={() => window.open("https://calendly.com/juanpabloramirez-004/30min", "_blank")}
+          <CardContent style={{ maxWidth: '300px', padding: '8px' }}>
+            <div
+              onClick={() => setShowAnswer(!showAnswer)}
+              className="rounded-lg p-2 cursor-pointer text-sm bg-[#16A6E9] text-white mb-2"
             >
-              Iniciar prueba gratuita
-            </Button>
+              Quiero lanzar una tarjeta de crédito. ¿Qué regulaciones debo considerar?
+            </div>
+            {showAnswer && (
+              <div className="rounded-lg p-2 text-sm bg-gray-300 text-black mb-2">
+                Debes cumplir con las normativas del Banco de México, la CNBV, y la Ley de Instituciones de Crédito...
+              </div>
+            )}
           </CardContent>
         </Card>
       </div>
 
       <div className="row-start-2">
-        {/* Service Card */}
         <Card className="w-full relative">
-          <BorderBeam colorFrom={primaryColor} colorTo="#1a85db" /> {/* Updated BorderBeam with primary color */}
+          <BorderBeam colorFrom={primaryColor} colorTo="#1a85db" />
           <CardHeader className="flex flex-row items-center justify-between pb-2">
-            <div className="text-lg font-bold">Resolución que modifica a las instituciones de crédito.</div>
+            <div className="text-lg font-bold">Monitoreo Regulatorio</div>
           </CardHeader>
           <CardContent>
             <p className="text-md">
@@ -146,11 +147,11 @@ export const HeroCards = () => {
             <Tag className="w-4 h-4 cursor-pointer" />
             <ThumbsUp 
               className={`w-4 h-4 cursor-pointer ${iconClicked[0] ? "fill-current text-black" : "text-gray-500"}`} 
-              onClick={() => handleIconClick(0)}
+              onClick={() => setIconClicked([!iconClicked[0], iconClicked[1]])}
             />
             <ThumbsDown 
               className={`w-4 h-4 cursor-pointer ${iconClicked[1] ? "fill-current text-black" : "text-gray-500"}`} 
-              onClick={() => handleIconClick(1)}
+              onClick={() => setIconClicked([iconClicked[0], !iconClicked[1]])}
             />
           </CardFooter>
         </Card>

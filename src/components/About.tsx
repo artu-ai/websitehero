@@ -52,7 +52,7 @@ export const About = () => {
                 Artu
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Artu es un software de IA que automatiza el monitoreo de regulaciones y actúa como un chat GPT especializado en temas regulatorios. Además de nuestros productos preconfigurados de monitoreo y asistencia, también desarrollamos soluciones personalizadas para automatizar cualquier proceso de compliance. Somos expertos en crear herramientas de compliance con IA, ayudando a las empresas a reducir costos, evitar multas y agilizar sus operaciones.
+              Artu es un software de IA que automatiza procesos de compliance para Fintechs y empresas con actividades vulnerables, incluyendo monitoreo regulatorio, cumplimiento PLD, y respuesta a dudas regulatorias. Además de nuestros productos preconfigurados, desarrollamos soluciones personalizadas para automatizar cualquier proceso de compliance, ayudando a las empresas a reducir costos, evitar multas y optimizar sus operaciones.
               </p>
             </div>
             <div className="flex justify-between mt-6">

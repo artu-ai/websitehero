@@ -1,0 +1,62 @@
+/* CSS for the Inspection Line Animation */
+.inspection-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the card */
+    height: 3px; /* Thin horizontal line */
+    background: linear-gradient(to right, rgba(0, 255, 0, 0.7), rgba(0, 255, 0, 0.7));
+    animation: moveLineVertical 3s infinite linear; /* Slowed down to 3 seconds per pass */
+    z-index: 1;
+  }
+  
+  @keyframes moveLineVertical {
+    0% {
+      top: 0; /* Start at the top of the card */
+    }
+    100% {
+      top: 100%; /* Move to the bottom of the card */
+    }
+  }
+  
+  /* CSS for Checkmark/X Appearance */
+  .icon-container {
+    position: relative;
+    z-index: 2; /* Ensure icon is above the inspection line */
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .loading-dots::after {
+    content: ".";
+    animation: dots 1s steps(5, end) infinite;
+  }
+  
+  @keyframes dots {
+    0%, 20% {
+      content: ".";
+    }
+    40% {
+      content: "..";
+    }
+    60% {
+      content: "...";
+    }
+    80%, 100% {
+      content: "";
+    }
+  }
+  
+  .open-applications-bubble {
+    display: inline-block;
+    background-color: #e0f7ff; /* Color de fondo de la burbuja */
+    color: #16a6e9; /* Color del texto */
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 8px;
+  }
+  
