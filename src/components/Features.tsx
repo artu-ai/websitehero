@@ -130,7 +130,7 @@ export const Features = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <button className="mt-4 px-6 py-3 bg-primary text-white font-semibold rounded-md">
+                <button className="mt-4 px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-[#2EA3E1] transition-all duration-200 ease-in-out">
                   {products[currentIndex].buttonText}
                 </button>
               </a>
