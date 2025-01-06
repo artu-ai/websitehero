@@ -53,7 +53,7 @@ export const Cta = () => {
           >
             <Button 
               className="w-full md:w-auto"
-              onClick={() => window.open("https://calendly.com/juanpabloramirez-004/30min", "_blank")}
+              onClick={() => window.open("https://calendly.com/ceojuanpi/client-interview", "_blank")}
             >
               <AnimatedShinyText className="text-lg font-medium">
                 Solicitar una Demostración
